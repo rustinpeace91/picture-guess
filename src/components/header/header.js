@@ -8,6 +8,7 @@ const Header = props => (
         <div className = "header-image">
             <h1>Character Clicker Game</h1>
             <p>Score:{props.score}</p>
+            <p>{props.status}</p>
         </div>
     </div>
 

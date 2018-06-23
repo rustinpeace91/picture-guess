@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "../card/card";
 import characters from "../../characters";
 import "./grid.css";
-import "lodash"
+// import "lodash"
 // import masterShake from "../../../public/assets/images/shake.jpg"
 
 class Grid extends Component{
@@ -18,7 +18,9 @@ class Grid extends Component{
     handleGuess(guess){
         if(this.state.guessed.includes(guess)){
             this.shuffle(this.state.characters)
-            this.state.guessed = [];
+            this.setState({
+                guessed:[]
+            })
             this.props.handleReset();
         } else {
             this.props.handleIncrement();
@@ -29,8 +31,8 @@ class Grid extends Component{
 
     shuffle(array){
         // Fisher Yates array shuffling method
-        // Cannot figure out how to do this with array.map 
-        // i needs to start at the length and go backwards
+        // Cannot figure out how to do this with array.map or ES6
+        // it needs to start at the length and go backwards
         // there are ways I found to use array.map and array.reduceRight(), but they were far more inconvenient than just doing it the old fashioned way
         let i = 0;
         let j = 0;
@@ -44,6 +46,8 @@ class Grid extends Component{
         this.setState({
             characters:array
         })
+
+        // attempted to import a library to take care of this for me. did not work
         // this.setState({
         //   characters: _.shuffle(characters)  
         // })
@@ -55,7 +59,7 @@ class Grid extends Component{
               {this.state.characters.map(character => (
 			    <div className = "col col-md-4">
 				    <button onClick={() => this.handleGuess(character.id)}>
-					    <Card key = {character.id} id = {character.id} name = {character.name}/> 
+					    <Card key = {character.id} img = {character.image} id = {character.id} name = {character.name}/> 
 					</button>
 				</div>
 			   ))
