@@ -7,7 +7,7 @@ const Header = props => (
     <div className = "jumbotron">
         <div className = "header-image">
             <h1>Character Clicker Game</h1>
-            <p>Score:</p>
+            <p>Score:{props.score}</p>
         </div>
     </div>
 

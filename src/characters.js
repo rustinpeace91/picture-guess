@@ -1,20 +1,24 @@
 const characters = [
-    {
-        "name": "Tom Peters",
-        "image":"?"        
+    {   
+        id : 1,
+        name: "Tom Peters",
+        image:"?"        
     },
     {
-        "name": "Joy Peters",
-        "image":"?"        
+        id : 2,
+        name: "Joy Peters",
+        image:"?"        
     },
     {
-        "name": "Spraynard Krueger",
-        "image":"?"        
+        id : 3,
+        name: "Spraynard Krueger",
+        image:"?"        
     },
     {
-        "name": "Master Shake",
-        "image":"?"        
+        id : 4,
+        name: "Master Shake",
+        image:"?"        
     }
 
 ]
-export default characterss;
+export default characters;
