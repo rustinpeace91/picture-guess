@@ -12,11 +12,9 @@ class Grid extends Component{
 
     componentDidMount(){
         this.shuffle(this.state.characters);
-        console.log(this.state.guessed);
     }
 
-    handleGuess(){
-        var guess = "joy peters";
+    handleGuess(guess){
         if(this.state.guessed.includes(guess)){
             this.shuffle(this.state.characters)
         } else {
@@ -29,6 +27,7 @@ class Grid extends Component{
         // Fisher Yates array shuffling method
         // Cannot figure out how to do this with array.map 
         // i needs to start at the length and go backwards
+        // there are ways I found to use array.map and array.reduceRight(), but they were far more inconvenient than just doing it the old fashioned way
         let i = 0;
         let j = 0;
         let temp = null
@@ -51,7 +50,7 @@ class Grid extends Component{
             <div className = "row">
               {this.state.characters.map(character => (
 			    <div className = "col col-md-4">
-				    <button onClick={this.handleGuess}>
+				    <button onClick={() => this.handleGuess(character.id)}>
 					    <Card key = {character.id} id = {character.id} name = {character.name}/> 
 					</button>
 				</div>
