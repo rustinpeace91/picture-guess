@@ -3,6 +3,7 @@ import Card from "../card/card";
 import characters from "../../characters";
 import "./grid.css";
 import "lodash"
+// import masterShake from "../../../public/assets/images/shake.jpg"
 
 class Grid extends Component{
     state = {
@@ -17,9 +18,12 @@ class Grid extends Component{
     handleGuess(guess){
         if(this.state.guessed.includes(guess)){
             this.shuffle(this.state.characters)
+            this.state.guessed = [];
+            this.props.handleReset();
         } else {
             this.props.handleIncrement();
             this.state.guessed.push(guess);
+            this.shuffle(this.state.characters)
         }
     }
 

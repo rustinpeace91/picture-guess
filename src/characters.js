@@ -11,7 +11,7 @@ const characters = [
     },
     {
         id : 3,
-        name: "Spraynard Krueger",
+        name: "Xavier Renegade Angel",
         image:"?"        
     },
     {

@@ -33,7 +33,7 @@ class App extends Component {
 
         <div className="container">
         <button onClick={this.handleReset}>RESET</button>
-          <Grid example="foo" handleIncrement={this.handleIncrement}/>
+          <Grid example="foo" handleIncrement={this.handleIncrement} handleReset={this.handleReset}/>
         </div>
       </div>
     );
