@@ -1,0 +1,16 @@
+clicky game
+-renders images in a (4 X 3?) grid
+-allows user to click images
+-updates the score every time an image is clicked
+-if an image is clicked twice, score resets to 0
+
+Components:
+-Title bar
+    -renders a title, and the score
+-picture grid
+    -renders the pictures and handles click events
+-footer?
+    -renders footer
+
+Other:
+    -characters.json (array of objects for the characters)
