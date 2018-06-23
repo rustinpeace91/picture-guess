@@ -2,7 +2,7 @@
 import React from "react";
 
 import "./header.css";
-
+// contains the title, the score and the message
 const Header = props => (
     <div className = "jumbotron">
         <div className = "header-image">

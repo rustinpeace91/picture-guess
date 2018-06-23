@@ -1,3 +1,4 @@
+// renders a single card for each character
 
 import React from "react";
 import "./card.css";

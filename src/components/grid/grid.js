@@ -1,3 +1,5 @@
+// renders the grid of photos
+
 import React, { Component } from "react";
 import Card from "../card/card";
 import characters from "../../characters";
@@ -6,6 +8,8 @@ import "./grid.css";
 // import masterShake from "../../../public/assets/images/shake.jpg"
 
 class Grid extends Component{
+    // imports characters from the js file
+    // creates a blank array for guessed characters
     state = {
         characters,
         guessed: []
